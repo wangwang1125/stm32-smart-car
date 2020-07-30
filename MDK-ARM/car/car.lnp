@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"car\startup_stm32f103xe.o"
+"car\lcd1602.o"
+"car\car.o"
+"car\color.o"
+"car\main.o"
+"car\gpio.o"
+"car\tim.o"
+"car\stm32f1xx_it.o"
+"car\stm32f1xx_hal_msp.o"
+"car\stm32f1xx_hal_gpio_ex.o"
+"car\stm32f1xx_hal_tim.o"
+"car\stm32f1xx_hal_tim_ex.o"
+"car\stm32f1xx_hal.o"
+"car\stm32f1xx_hal_rcc.o"
+"car\stm32f1xx_hal_rcc_ex.o"
+"car\stm32f1xx_hal_gpio.o"
+"car\stm32f1xx_hal_dma.o"
+"car\stm32f1xx_hal_cortex.o"
+"car\stm32f1xx_hal_pwr.o"
+"car\stm32f1xx_hal_flash.o"
+"car\stm32f1xx_hal_flash_ex.o"
+"car\lcd12864.o"
+"car\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "car\car.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "car.map" -o car\car.axf
